@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Configuration: Enter your Formspree URL OR Web3Forms Access Key to receive real emails in your Gmail
             const formspreeUrl = "YOUR_FORMSPREE_URL_HERE"; // e.g., "https://formspree.io/f/your_form_id"
-            const web3FormsAccessKey = "YOUR_WEB3FORMS_ACCESS_KEY_HERE"; // e.g., "your-web3forms-key"
+            const web3FormsAccessKey = "d9b8b801-fcd4-4556-a46e-d5023513d4cc"; // e.g., "your-web3forms-key"
 
             if (formspreeUrl !== "YOUR_FORMSPREE_URL_HERE") {
                 // Real submission using Formspree
