@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll offset adjustments and active class tracking
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
     const scrollActive = () => {
         const scrollY = window.pageYOffset;
@@ -47,11 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionTop = current.offsetTop - 120; // Match offset with navbar padding
             const sectionId = current.getAttribute('id');
             const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+            const mobileNavLink = document.querySelector(`.mobile-bottom-nav a[href*=${sectionId}]`);
 
-            if (navLink) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                if (navLink) {
                     navLinks.forEach(link => link.classList.remove('active'));
                     navLink.classList.add('active');
+                }
+                if (mobileNavLink) {
+                    mobileNavLinks.forEach(link => link.classList.remove('active'));
+                    mobileNavLink.classList.add('active');
                 }
             }
         });
